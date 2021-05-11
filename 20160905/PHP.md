@@ -15,6 +15,14 @@ csf框架现已经升级为csf v0.11，csf v0.11与之前的v0.1框架在使用�
 
 ####5. 任务步骤
 1. 代码部署
+```php
+    // 1.登录到对应的TCP服务器
+    // 2. git clone PetSocket2.0项目
+    // 3. 进入PetSocket2.0/application文件夹
+    // 4. php composer.phar update -vvv 进行vendor安装
+    // 5. cd ..
+    // 6. php index.php 尝试启动
+```
 
 2. 在所有业务相关的判断分支（if、switch等）打印日志，例如：
 
