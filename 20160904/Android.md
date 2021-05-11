@@ -20,38 +20,38 @@ fn(states,props) = Component // 多简洁而美好的公式啊^_^
 完成调试日志logger类，并提供logMessage的类方法，并在debug=true的状态能够进行调试日志的采集工作且能够有对应界面操作，点击后依靠七牛的SDK上传对应的调试日志
 
 ####5. 任务步骤
-1. 确定一个logger类，取名为CLogger
-```php
-class CLogger{
-	// sth need to do...
-}
-```
+    1. 确定一个logger类，取名为CLogger
+    ```php
+    class CLogger{
+        // sth need to do...
+    }
+    ```
 
-2.在配置debug变量，当debug=true时进行调试日志的输出
-```php
-class CLogger{
-	private $debugger = false;
-}
-```
+    2.在配置debug变量，当debug=true时进行调试日志的输出
+    ```php
+    class CLogger{
+        private $debugger = false;
+    }
+    ```
 
-3.编写logMessage类方法，当debug=false时跳过，当debug=true时利用对应的库进行日志打印（打印级别为debug）
-```php
-class CLogger{
-	private $debugger = false;
-	public static function logMessage($str){
-		if(!$this->debugger){
-			return;
-		}
+    3.编写logMessage类方法，当debug=false时跳过，当debug=true时利用对应的库进行日志打印（打印级别为debug）
+    ```php
+    class CLogger{
+        private $debugger = false;
+        public static function logMessage($str){
+            if(!$this->debugger){
+                return;
+            }
 
-		// you should use lib's log method to write
-	}
-}
-```
+            // you should use lib's log method to write
+        }
+    }
+    ```
 
->要求：
-> 1.每条打印的日志需要包含日志级别（debug）/ 打印时间 / 内容 / 调用位置 4个信息
-> 2.存储的日志文件名称以小时进行分割，例如：debug20160904230000.log
-> 3.日志文件需要可读可写，方便之后的上传
+    >要求：
+    > 1.每条打印的日志需要包含日志级别（debug）/ 打印时间 / 内容 / 调用位置 4个信息
+    > 2.存储的日志文件名称以小时进行分割，例如：debug20160904230000.log
+    > 3.日志文件需要可读可写，方便之后的上传
 
 4.在应用相关设置列表处新增一个“上传调试日志”的button，当debug=true时才能够显示（所以现在你可以把上面的$debugger抽到配置文件中去了，配置文件可以是一个静态类（推荐），可以是一个纯文本text，也可以是一个yaml，也可以是一个json文件，怎麼方便怎么来）
 ```php
