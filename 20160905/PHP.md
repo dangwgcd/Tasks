@@ -36,13 +36,13 @@ csf框架现已经升级为csf v0.11，csf v0.11与之前的v0.1框架在使用�
 ```php
 // sth more..
 
-CoreHelper::logMessage('debug', 'relate model start: '+json_encode($data));
+CoreHelper::logMessage('debug', 'relate model start: '.json_encode($data));
 $this->relateModel->findByToken($data);
 CoreHelper::logMessage('debug', 'relate model end');
 
 // sth more..
 
-CoreHelper::logMessage('debug','ssdb start: '+json_encode($data));
+CoreHelper::logMessage('debug','ssdb start: '.json_encode($data));
 $this->ssdb->set($data);
 CoreHelper::logMessage('debug', 'ssdb end');
 
