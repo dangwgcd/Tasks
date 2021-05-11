@@ -14,7 +14,9 @@ csf框架现已经升级为csf v0.11，csf v0.11与之前的v0.1框架在使用�
 完成所有上传的硬件的指令的测试工作，并且确保现有所有的业务逻辑仍然是正确的
 
 ####5. 任务步骤
-1. 在所有业务相关的判断分支（if、switch等）打印日志，例如：
+1. 代码部署
+
+2. 在所有业务相关的判断分支（if、switch等）打印日志，例如：
 
 ```php
 	// 不是所有if和switch都需要打日志，只需要在业务判断部分
@@ -29,7 +31,7 @@ csf框架现已经升级为csf v0.11，csf v0.11与之前的v0.1框架在使用�
 >CoreHelper::logMessage('debug',111)  is bad
 >CoreHelper::logMessage('debug', 'start in login') is good
 
-2.在所有外部调用前后打印日志
+3.在所有外部调用前后打印日志
 ```php
 // sth more..
 
@@ -51,9 +53,9 @@ CoreHelper::logMessage('debug', 'ssdb end');
 >HTTP服务（Curl等）
 >消息队列（NSQ等）
 
-3. 测试在现有csf v0.11框架下，接受到的每个指令业务逻辑是否仍然正确
+4. 测试在现有csf v0.11框架下，接受到的每个指令业务逻辑是否仍然正确
 
-4. 填写测试EXCEL表，示例如下：
+5. 填写测试EXCEL表，示例如下：
 <table>
 	<tr>
 		<th>功能</th>
