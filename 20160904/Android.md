@@ -26,12 +26,14 @@ class CLogger{
 	// sth need to do...
 }
 ```
+
 2.在配置debug变量，当debug=true时进行调试日志的输出
 ```php
 class CLogger{
 	private $debugger = false;
 }
 ```
+
 3.编写logMessage类方法，当debug=false时跳过，当debug=true时利用对应的库进行日志打印（打印级别为debug）
 ```php
 class CLogger{
@@ -45,6 +47,7 @@ class CLogger{
 	}
 }
 ```
+
 >要求：
 > 1.每条打印的日志需要包含日志级别（debug）/ 打印时间 / 内容 / 调用位置 4个信息
 > 2.存储的日志文件名称以小时进行分割，例如：debug20160904230000.log
