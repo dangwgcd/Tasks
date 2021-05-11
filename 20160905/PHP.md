@@ -23,6 +23,8 @@ csf框架现已经升级为csf v0.11，csf v0.11与之前的v0.1框架在使用�
     // 5. cd ..
     // 6. php index.php 尝试启动
 ```
+>原有的服务有监听9001端口，因此需要先关闭原有服务，简单的方法是以root来重启: reboot
+>或者在PetSocket2.0/application/config/config.php中将端口改为其他9002
 
 2. 在所有业务相关的判断分支（if、switch等）打印日志，例如：
 
